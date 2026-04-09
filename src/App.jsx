@@ -7,20 +7,20 @@ import Login from './component/login'
 
 function App() {
   return (
-    <Router>
+    <Router basename="/saku">
       <div>
         <h1>Hello, User!</h1>
         <nav>
           <Link to="/home">Home</Link>
           <Link to="/about">About</Link>
           <Link to="/login">Login/Sign-Up</Link>
+        </nav>
         <Routes>
-          
+          <Route path="/" element={<Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/login" element={<Login />} />
         </Routes>
-        </nav>
       </div>
     </Router>
   )
